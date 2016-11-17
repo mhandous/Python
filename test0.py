@@ -44,4 +44,4 @@ liste.remove(38)
 print(liste)
 #afficher la sous liste du 3eme element jusqu'a la fin de la liste
 print(liste[2:])
-#ajouter a git
+
