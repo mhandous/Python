@@ -1,0 +1,170 @@
+Résultat de recherche d'images pour "python"
+toujours rajouter l'extention .py lors de la creation d'un script python
+
+#!/usr/bin/python3
+
+# pour inserer des commentaires
+
+#! sheebang permet de passer le controle le package python (fournie donc le chemin d'acces a l'interpreteur python)
+
+import sys
+permet d'importer une librairie dans ce cas sys
+
+print (sys.version_info)
+imprime une information la on vas chercher dans la lib sys et on demande la version info
+
+print (sys.version)
+
+imprime une information la on vas chercher dans la lib sys et on demande la version
+
+print (sys.platform)
+
+imprime une information la on vas chercher dans la lib sys et on demande la plateforme
+
+clique droit sur le scrip puis selectionner run test
+
+---> resultat
+
+/usr/bin/python3.4 /home/stagiaire/PycharmProjects/basic/test.py
+sys.version_info(major=3, minor=4, micro=3, releaselevel='final', serial=0)
+3.4.3 (default, Aug  9 2016, 15:36:17)
+[GCC 5.3.1 20160406 (Red Hat 5.3.1-6)]
+linux
+
+Process finished with exit code 0
+
+faire un chmod 775 test.py pour le rendre executable
+
+la commande Crtl bar d espace liste des commandes
+Attention python est sensible a la tabulation (4 caratères)
+Attention afin d'afficher un caractere speciale comme \ il faut mettre un caractere d'echapement il faut donc taper \\
+
+Traitement des chaines de caracteres
+
+str = "variable" permet de seter une variable
+len (variable)  permet d'avoir le nombre de caractere qui compose la variable
+indexing permet de faire une recherche de caractere dans la variable ex. str [0]
+    attention la numeroation commence a 0 et -X inverse le sens de recherche et pour rechercher une chaine [x:x]
+    [x:] recherche de x jusqu'a la fin de la variable
+    variable + 'test' permet de concatener la variable plus un texte ou une autre varialbe
+    variable *x permet de multiplier l affichage de la variable
+    variable = 'caratere a remplacer' + variable[x:] permet de modifier un caractere dans la variable
+    variable = list(variable) permet de faire la liste des varialbes separees par des virgule
+        ex. : >>> l = list(str)
+              >>> l
+              ['z', 'p', 'a', 'm']
+    variable.string('caracteres rechercher') faire une recherche de caratere dans la variable
+        ex. : >>> string = 'Spam'
+              >>> string.find('pa')
+              1
+        La valeur retourné est la position de la premiere lettre de la chaine rechercher si la reponse est
+        -1 c'est que la valeur recherche n'est pas presente.
+    modification de l'affichage
+              >>> string.replace('pa', 'YXZ')
+              'SYXZm'
+              >>> string
+              'Spam'
+    La commande id donne l'identifiant memoire de la variable (adresse memoire)
+              >>> p = "toto"
+              >>> t = "titi"
+              >>> id(p)
+              139973287147144
+              >>> id(t)
+              139973287146640
+     spliter la variable via un caractere (ex. type CVS)
+              >>> line = 'aaa,bbb,ccc"'
+              >>> line.split(',')
+              ['aaa', 'bbb', 'ccc"']
+
+     Permets de mettre tous les caracteres en majuscule
+              >>> string.upper()
+              'SPAM'
+
+              >>> string.isalpha()
+              True
+
+              >>> string = 'Spam100'
+              >>> string.isalpha()
+              False
+
+              >>> line = 'aaa,bbb,ccc\n'
+              >>> line
+              'aaa,bbb,ccc\n'
+              >>> line.rstrip()
+              'aaa,bbb,ccc'
+              >>> line
+              'aaa,bbb,ccc\n'
+
+              >>> line.rstrip().split(',')
+              ['aaa', 'bbb', 'ccc']
+
+Traitement de Liste
+
+Creation d'une liste
+
+    >>> L = [123, 'spam', 1.23]
+    >>> L
+    [123, 'spam', 1.23]
+    >>> L[0]
+    123
+    >>> L + [4,5,6]
+    [123, 'spam', 1.23, 4, 5, 6]
+    >> L * 2
+    [123, 'spam', 1.23, 123, 'spam', 1.23]
+    >>> len (L)taille de la liste
+    3
+    >>> L[:-1]
+    [123, 'spam']
+    >>> L.append('TEST')
+    >>> L
+    [123, 'spam', 1.23, 'TEST']
+    >>> L.pop(2) cette commande sert a enlever un element
+    1.23 resultat de l element qui vas être eleve
+    resultat
+         >>> L
+         [123, 'spam', 'TEST']
+
+    Effectuer un trie
+     >>> L = ['cat', 'dog', 'ant']
+     >>> L.sort()
+     >>> L
+     ['ant', 'cat', 'dog']
+
+    Pour changer une variable de la liste
+    >>> L[1]= 'zebra'
+    >>> L
+    ['ant', 'zebra', 'dog']
+
+    Matrice
+    >>> L = [[1,2,3], [4,5,6], [7,8,9]]
+    >>> L[1]
+    [4, 5, 6]
+    >>> L[1][2]
+    6
+
+Test conditionnel
+pour les commandes
+if(si) elif(et si) else(sinon alors) toujours mettre en fin de ligne ":"
+pour faire une comparaison toujours mettre un double egale ==
+
+
+______________________________________________________________________________________________________________________________
+17-11-2016
+
+test0.py
+print ("La vitesse est - {:.2f} mettre par seconde".format(vitesse))
+                |           |                           |
+              chaine      balise                   methode argument
+    format permet de reperer la balise afin d y placer l'argument
+
+
+
+
+
+
+
+
+
+
+
+
